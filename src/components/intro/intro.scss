@@ -1,0 +1,128 @@
+@import '../../global.scss';
+
+.intro{
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+
+    .img-container{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 40%;
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+        transform: rotate(-10deg) scaleX(-1);
+
+        @include mobile{
+        height: 40%;
+        margin-top: 40%;
+        }
+    }
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inner-container{
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            //padding-left: 50px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+            }
+
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+                z-index: 1;
+
+
+                @include mobile{
+                    font-size: 35px;
+                }
+            }
+
+            h2{
+                font-size: 35px;
+                z-index: 1;
+
+                @include mobile{
+                    font-size: 25px;
+                }
+
+            }
+
+            h3{
+                font-size: 30px;
+                z-index: 1;
+
+
+                @include mobile{
+                    font-size: 17px;
+                }
+
+                span{
+                    font-size: 30px;
+                    color: crimson;
+
+                    @include mobile{
+                        font-size: 20px;
+                    }
+                }
+
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            
+
+            img{
+                width: 30px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+        
+
+    }
+}
